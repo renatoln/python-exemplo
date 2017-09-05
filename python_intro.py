@@ -18,7 +18,7 @@ else:
 # > conda create -n yourenvname python=x.x anaconda
 
 # iniciar a virtualevn anaconda
-# > source activate renatoenv
+# > source activate renatoenv #myvenv
 # parar
 # > source deactivate
 
