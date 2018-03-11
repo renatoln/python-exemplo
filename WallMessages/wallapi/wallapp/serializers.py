@@ -16,6 +16,7 @@ class DisciplinaSerializer(serializers.ModelSerializer):
 
         model = Disciplina
         fields = '__all__'
+        depth = 1
 
 
 class Disciplina_AlunosSerializer(serializers.ModelSerializer):
@@ -24,7 +25,7 @@ class Disciplina_AlunosSerializer(serializers.ModelSerializer):
 
         model = Disciplina_Alunos
         fields = '__all__'
-
+        depth = 1
 
 class MensagemSerializer(serializers.ModelSerializer):
 

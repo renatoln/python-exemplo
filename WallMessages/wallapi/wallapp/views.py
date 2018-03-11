@@ -4,16 +4,30 @@
 from .models import Usuario, Disciplina, Disciplina_Alunos, Mensagem
 from .serializers import UsuarioSerializer, DisciplinaSerializer, Disciplina_AlunosSerializer, MensagemSerializer
 from rest_framework import generics
+from django_filters import rest_framework as filters
 #from rest_framework.authentication import SessionAuthentication
 #from rest_framework.permissions import IsAdminUser, IsAuthenticated, AllowAny
 
+'''
+class UsuarioFilter(filters.FilterSet):
 
+    email = filters.DateFilter(name="date", lookup_expr='gte')
+    senha = filters.DateFilter(name="date", lookup_expr='lte')
+
+    class Meta:
+
+        model = Usuario
+        fields = '__all__'
+'''
 class UsuarioList(generics.ListCreateAPIView):
 
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
     #authentication_classes = [SessionAuthentication]
     #permission_classes = (IsAuthenticated, )
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = '__all__'
+    #filter_class = UsuarioFilter
 
 
 class UsuarioDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -21,6 +35,8 @@ class UsuarioDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = UsuarioSerializer
     #authentication_classes = [SessionAuthentication]
     #permission_classes = (IsAuthenticated, )
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = '__all__'
 
 
 class DisciplinaList(generics.ListCreateAPIView):
@@ -29,6 +45,8 @@ class DisciplinaList(generics.ListCreateAPIView):
     serializer_class = DisciplinaSerializer
     #authentication_classes = [SessionAuthentication]
     #permission_classes = (IsAuthenticated, )
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = '__all__'
 
 
 class DisciplinaDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -36,6 +54,8 @@ class DisciplinaDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = DisciplinaSerializer
     #authentication_classes = [SessionAuthentication]
     #permission_classes = (IsAuthenticated, )
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = '__all__'
 
 
 class Disciplina_AlunosList(generics.ListCreateAPIView):
@@ -44,6 +64,8 @@ class Disciplina_AlunosList(generics.ListCreateAPIView):
     serializer_class = Disciplina_AlunosSerializer
     #authentication_classes = [SessionAuthentication]
     #permission_classes = (IsAuthenticated, )
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = '__all__'
 
 
 class Disciplina_AlunosDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -51,6 +73,8 @@ class Disciplina_AlunosDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = Disciplina_AlunosSerializer
     #authentication_classes = [SessionAuthentication]
     #permission_classes = (IsAuthenticated, )
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = '__all__'
 
 
 class MensagemList(generics.ListCreateAPIView):
@@ -59,6 +83,8 @@ class MensagemList(generics.ListCreateAPIView):
     serializer_class = MensagemSerializer
     #authentication_classes = [SessionAuthentication]
     #permission_classes = (IsAuthenticated, )
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = '__all__'
 
 
 class MensagemDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -66,3 +92,5 @@ class MensagemDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = MensagemSerializer
     #authentication_classes = [SessionAuthentication]
     #permission_classes = (IsAuthenticated, )
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = '__all__'
