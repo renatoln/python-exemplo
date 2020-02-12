@@ -28,7 +28,7 @@ Cython==0.22.1
 cytoolz==0.7.3
 datashape==0.4.5
 decorator==4.0.4
-Django==1.8.5
+Django==1.11.28
 django-filter==1.0.4
 django-suit==0.2.25
 djangorestframework==3.6.4
