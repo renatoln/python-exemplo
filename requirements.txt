@@ -23,7 +23,7 @@ colorama==0.3.3
 conda==4.3.25
 conda-build==1.14.1
 configobj==5.0.6
-cryptography==1.8.1
+cryptography==3.2
 Cython==0.22.1
 cytoolz==0.7.3
 datashape==0.4.5
