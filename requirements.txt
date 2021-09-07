@@ -73,7 +73,7 @@ patsy==0.3.0
 pep8==1.6.2
 pexpect==3.3
 pickleshare==0.5
-Pillow==3.0.0
+Pillow==8.3.2
 ply==3.6
 psutil==2.2.1
 ptyprocess==0.4
